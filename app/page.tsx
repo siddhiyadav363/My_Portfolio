@@ -64,9 +64,11 @@ const projects = [
  
 ];
 
+type Project = typeof projects[number];
+
 export default function PortfolioPage() {
   const [dark, setDark] = useState(false);
-  const [selected, setSelected] = useState(null);
+  const [selected, setSelected] = useState<Project | null>(null);
 
   return (
     <div className={`${dark ? "dark" : ""}`}>
